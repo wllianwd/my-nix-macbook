@@ -27,10 +27,12 @@ in
     docker
     colima
     docker-compose
+    ollama
     hoppscotch
     maven
     neofetch
     python3
+    supabase-cli
     nodejs
     cargo
     rustc
@@ -40,6 +42,7 @@ in
     awscli2
     nixd
     nil
+    alejandra
     nixfmt-rfc-style
     ragenix
     google-chrome

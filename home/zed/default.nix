@@ -29,8 +29,6 @@
             formatting = {
               command = [
                 "nixfmt"
-                "--quiet"
-                "--"
               ];
             };
           };
@@ -45,8 +43,6 @@
             formatting = {
               command = [
                 "nixfmt"
-                "--quiet"
-                "--"
               ];
             };
           };

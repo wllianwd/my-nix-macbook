@@ -1,6 +1,6 @@
-# Nix configuration for MacBook
+# **Nix Configuration**
 
-A basic MacBook nix configuration.
+This is my personal **Nix** configuration for macOS, designed specifically for **backend development**. It is **highly opinionated** and optimized for my workflow.
 
 ## Installing Nix
 
@@ -11,10 +11,10 @@ Considering you aready download this repo and have it opened in your terminal:
 curl -sSf -L https://install.lix.systems/lix | sh -s -- install
 
 # change global.nix accondingly to your information
-nano global.nix
+vi global.nix
 
 # build & apply nix (after that, you can close the terminal and open Alacritty)
-nix run nix-darwin -- switch --flake . --show-trace
+sudo darwin-rebuild switch --flake .
 ```
 
 After the system is built from the first time, some additional commands will be available:

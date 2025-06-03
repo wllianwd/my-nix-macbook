@@ -1,8 +1,9 @@
 #/bin/sh
 
-echo "Executing: nix flake update && nix run nix-darwin -- switch --flake . --show-trace"
+echo "Executing: sudo nix flake update && sudo darwin-rebuild switch --flake ."
 
 pushd $MY_NIX_CONFIG_DIR
-nix flake update
-nix run nix-darwin -- switch --flake . --show-trace
+sh ./home/zsh/scripts/nix-update-idea-plugins.sh
+sudo nix flake update
+sudo darwin-rebuild switch --flake .
 popd

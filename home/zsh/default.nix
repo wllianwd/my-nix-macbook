@@ -31,7 +31,7 @@ in
       mnix = "cd ${global.nixConfigDirectory}";
       mnix-rebuild = "sh ${global.nixConfigDirectory}/home/zsh/scripts/nix-rebuild.sh";
       mnix-update = "sh ${global.nixConfigDirectory}/home/zsh/scripts/nix-update.sh";
-      mnix-develop = "nix develop ${global.nixConfigDirectory}#$(fd . '${global.nixConfigDirectory}/shells' --type f --hidden --exclude '*.md' --max-depth 1 | xargs -I {} basename {} .nix | fzf)";
+      mnix-develop = "nix develop ${global.nixConfigDirectory}#$(fd . '${global.nixConfigDirectory}/home/shells' --type f --hidden --exclude '*.md' --max-depth 1 | xargs -I {} basename {} .nix | fzf)";
       mnix-ragenix-create-secret = "sh ${global.nixConfigDirectory}/home/zsh/scripts/ragenix-create-secret.sh";
     };
 
@@ -62,7 +62,7 @@ in
       ];
     };
 
-    initExtra = ''
+    initContent = ''
       # tmux to have correct color setting
       if [ ! "$TMUX" = "" ]; then
         export TERM=xterm-256color;

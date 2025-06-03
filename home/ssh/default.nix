@@ -10,7 +10,7 @@ in
   programs.ssh = {
     enable = true;
     matchBlocks = lib.filterAttrs (name: value: value != null) {
-      "gitlab.my-company.com" = lib.mkIf idRsaExists {
+      "gitlab.mycompany.com" = lib.mkIf idRsaExists {
         user = "git";
         identityFile = [ idRsaPath ];
       };

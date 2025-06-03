@@ -1,0 +1,44 @@
+[
+  {
+    "id": 10761,
+    "version": "2.4.3",
+    "url": "https://downloads.marketplace.jetbrains.com/files/10761/700573/Detekt_IntelliJ_Plugin-2.4.3.zip",
+    "hash": "sha256-9tefRKNPnK6yzFS5cyad4UW5NhYQJcBeJSVE/mjxe8o=",
+    "name": "detekt"
+  },
+  {
+    "id": 14912,
+    "version": "1.2.0.55",
+    "url": "https://downloads.marketplace.jetbrains.com/files/14912/749879/idea_plugin-1.2.0.55.zip",
+    "hash": "sha256-KRCtAUCmL++elf1qS2Ip/yCfUxvrantPN+7QRdTSGyY=",
+    "name": "ktfmt"
+  },
+  {
+    "id": 20540,
+    "version": "2.0.4",
+    "url": "https://downloads.marketplace.jetbrains.com/files/20540/752267/codeium-2.0.4.zip",
+    "hash": "sha256-C9MUWSCFb9+ONYE3P4qjKGzSeGpus8O3eY6kgpAl8zg=",
+    "name": "Windsurf Plugin (formerly Codeium) for Python, JS, Java, Go..."
+  },
+  {
+    "id": 22857,
+    "version": "252.16512.37-IU",
+    "url": "https://downloads.marketplace.jetbrains.com/files/22857/751283/vcs-gitlab-IU-252.16512.37-IU.zip",
+    "hash": "sha256-vlOjrJzGtf7aRZXYuBm1jOYP+AdC/R11kfJESazh2C4=",
+    "name": "GitLab"
+  },
+  {
+    "id": 7179,
+    "version": "4.29.0-IJ2022.2",
+    "url": "https://downloads.marketplace.jetbrains.com/files/7179/617030/MavenHelper-4.29.0-IJ2022.2.zip",
+    "hash": "sha256-BA6gbStpYb76VS+61WCxakZyGM9Zuxokc3zfx2OBGn4=",
+    "name": "Maven Helper"
+  },
+  {
+    "id": 21704,
+    "version": "252.18003.27",
+    "url": "https://downloads.marketplace.jetbrains.com/files/21704/758190/bigdatatools-kafka-252.18003.27.zip",
+    "hash": "sha256-VgmvIqNCPMLvVAcp7OD5bltmNc09j54h3MkXC1/64tQ=",
+    "name": "Kafka"
+  }
+]

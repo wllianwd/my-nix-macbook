@@ -21,6 +21,7 @@ let
       version,
       url,
       hash,
+      ... # Allow extra attributes from JSON if any, though not used here
     }:
     let
       isJar = lib.hasSuffix ".jar" url;
@@ -45,32 +46,16 @@ let
       inherit installPhase;
     };
 
-  detekt = downloadPlugin {
-    name = "detekt";
-    version = "2.4.2";
-    url = "https://downloads.marketplace.jetbrains.com/files/10761/621940/Detekt_IntelliJ_Plugin-2.4.2.zip";
-    hash = "sha256-9dGFZkrovtu7vawAOJe0AL8fNQXu/mkyha1RXoorXD8=";
-  };
-  ktfmt = downloadPlugin {
-    name = "ktfmt";
-    version = "1.2.0.53";
-    url = "https://downloads.marketplace.jetbrains.com/files/14912/626875/ktfmt_idea_plugin-1.2.0.53.zip";
-    hash = "sha256-SIixbEcmsF8NgwH0k/ur9CpvBYxMdCvu/6wlHlOwYRc=";
-  };
-  codeium = downloadPlugin {
-    name = "codeium";
-    version = "1.40.1";
-    url = "https://downloads.marketplace.jetbrains.com/files/20540/690543/codeium-1.40.1.zip";
-    hash = "sha256-t55rZdHDjZ2DOS5r5ZiBDKLkpl1D4JP18KGORTX3s78=";
-  };
+  # Read and parse the plugin list from the JSON file
+  pluginDefinitions = builtins.fromJSON (builtins.readFile ./plugins.json);
+
+  # Download all plugins defined in the JSON file
+  downloadedPlugins = map downloadPlugin pluginDefinitions;
+
 in
 {
   home.packages = with pkgs; [
-    (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [
-      detekt
-      ktfmt
-      codeium
-    ])
+    (jetbrains.plugins.addPlugins jetbrains.idea-ultimate downloadedPlugins)
   ];
 
   home.file.".ideavimrc".text = builtins.readFile ./.ideavimrc;

@@ -1,7 +1,15 @@
-{ pkgs ? import <nixpkgs> { } }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 
 pkgs.mkShell {
-  packages = [ pkgs.python311 pkgs.git pkgs.poetry pkgs.pyenv ];
+  packages = [
+    pkgs.python311
+    pkgs.git
+    pkgs.poetry
+    pkgs.pyenv
+    pkgs.python311Packages.psycopg2
+  ];
   shellHook = ''
     echo "Checking if .venv exist"
     if [ ! -d "./.venv" ]; then

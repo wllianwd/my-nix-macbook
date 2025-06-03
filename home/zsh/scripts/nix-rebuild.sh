@@ -1,7 +1,7 @@
 #/bin/sh
 
-echo "Executing: nix run nix-darwin -- switch --flake . --show-trace"
+echo "Executing: sudo darwin-rebuild switch --flake ."
 
 pushd $MY_NIX_CONFIG_DIR
-nix run nix-darwin -- switch --flake . --show-trace
+sudo darwin-rebuild switch --flake .
 popd
